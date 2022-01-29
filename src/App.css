@@ -44,6 +44,38 @@
   justify-content: center;
   flex-direction: column;
 }
+.blob-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.blob{
+  width: 120vmin;
+  height: 110vmin;
+  position: absolute;
+  left: 21%;
+  top: 20%;
+  background-repeat: no-repeat;
+}
+p{
+  position: absolute;
+
+}
+.pyGrad{
+  background: -webkit-linear-gradient(45deg,#802bb1 20%,#FFE400);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#userName{
+  font-size: 30px;
+  top: 20%;
+  left: 40%;
+  z-index: 99;
+}
+#blob1{
+  width: 100%;
+}
 #lowerleft{
   position: absolute;
   bottom: -15%;
@@ -55,11 +87,12 @@ body{
   overflow: hidden;
 }
 .background-image{
-  width: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: -100;
+  min-width: 100%;
+
 }
 .App-link {
   color: whitesmoke;
@@ -67,7 +100,9 @@ body{
   font-size: 40px
 
 }
-
+#blob2{
+  opacity: 0;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
