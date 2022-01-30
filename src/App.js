@@ -5,8 +5,21 @@ import KUTE from 'kute.js'
 import blob1 from './blob-1.svg'
 import $ from 'jquery'
 import './App.css';
-
+import React, {useState,useEffect} from "react";
 function App() {
+    useEffect(()=> {
+        let keypress= $('input').keypress(function (e){
+            if (e.key==" "){
+                e.preventDefault()
+                if ($(this).val()["length"]<13) {
+                    let value = $(this).val()
+
+                    $(this).val(value + "_")
+                    console.log($(this).val()["length"])
+                }
+            }
+        });
+    })
 
 
     return (
@@ -29,6 +42,7 @@ function App() {
         <div className="blob" alt="logo" >
             <img src={blob1} id='blob1'/>
             <p className='pyGrad' id='userName'>UserName</p>
+            <input maxLength={12} className='inp pyGrad'/>
         </div>
         <div className="circle" id="lowerleft">
             <img src={logo} className="App-logo" alt="logo" />
@@ -37,8 +51,11 @@ function App() {
         </body>
       </div>
 
+
   );
 
 }
+
+
 
 export default App;

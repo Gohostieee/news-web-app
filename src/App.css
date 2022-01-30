@@ -21,7 +21,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+@font-face {
+  font-family: elec;
+  src: url(Electrolize-Regular.ttf);
+}
 .App-header {
   min-height: 20vh;
   display: flex;
@@ -69,9 +72,29 @@ p{
 }
 #userName{
   font-size: 30px;
-  top: 20%;
-  left: 40%;
+  top: 10%;
+  left: 38.5%;
   z-index: 99;
+}
+
+.inp{
+  outline: none;
+  background-color: rgba(0,0,0,0);
+  border-top: hidden;
+  border-right: hidden;
+  border-left: hidden;
+  border-image-slice: 1;
+  text-align: center;
+  width: 150px;
+  border-image-source: linear-gradient(45deg,#802bb1 5%,#FFE400);
+  border-bottom-width: 1px;
+  top: 20%;
+  left: 38%;
+  z-index: 99;
+  caret-color: #802bb1;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 25px;
 }
 #blob1{
   width: 100%;
@@ -85,6 +108,8 @@ p{
 body{
   background-color: black;
   overflow: hidden;
+  font-family: 'elec';
+
 }
 .background-image{
   position: absolute;
