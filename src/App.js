@@ -7,6 +7,21 @@ import $ from 'jquery'
 import './App.css';
 import React, {useState,useEffect} from "react";
 function App() {
+    function logCheck(){
+        let username= $("#usrInp").val();
+        let password = $("#passInp").val();
+
+        console.log(username,password)
+        fetch('/login', {
+            method: 'POST',
+            headers: {'Content-Type':"application/json"},
+            body: JSON.stringify({username,password}),
+
+
+
+
+        }).then(r =>{})
+    }
     useEffect(()=> {
         let keypress= $('input').keypress(function (e){
             if (e.key==" "){
@@ -45,7 +60,7 @@ function App() {
             <input maxLength={12} id='usrInp' className='inp pyGrad'/>
             <p className='pyGrad' id='passWord'>PassWord</p>
             <input maxLength={12} id='passInp' className={'inp pyGrad'}/>
-            <button className={'submit'}>submit</button>
+            <button type='submit' onClick={logCheck} className={'submit'}>submit</button>
 
         </div>
         <div className="circle" id="lowerleft">
