@@ -76,7 +76,12 @@ p{
   left: 38.5%;
   z-index: 99;
 }
-
+#passWord{
+  font-size: 30px;
+  top: 28%;
+  left: 38.5%;
+  z-index: 99;
+}
 .inp{
   outline: none;
   background-color: rgba(0,0,0,0);
@@ -88,13 +93,38 @@ p{
   width: 150px;
   border-image-source: linear-gradient(45deg,#802bb1 5%,#FFE400);
   border-bottom-width: 1px;
-  top: 20%;
-  left: 38%;
   z-index: 99;
   caret-color: #802bb1;
   font-size: 20px;
   position: absolute;
   margin-top: 25px;
+}
+
+.submit{
+  position: absolute;
+  margin-top: 25px;
+  top: 45%;
+  left: 41.8%;
+  background: #802bb1;
+  color: grey;
+  transition: background 0.5s,color 0.5s;
+  border: hidden;
+  font-family: elec;
+  border-radius: 10px;
+  font-size: 30px;
+}
+.submit:hover{
+  background: linear-gradient(45deg,rgba(128,43,177,1) 20%,rgba(255,228,0,1));
+  color: #FFE400;
+
+}
+#usrInp{
+  top: 20%;
+  left: 38%;
+}
+#passInp{
+  top: 38%;
+  left: 38%;
 }
 #blob1{
   width: 100%;

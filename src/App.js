@@ -42,7 +42,11 @@ function App() {
         <div className="blob" alt="logo" >
             <img src={blob1} id='blob1'/>
             <p className='pyGrad' id='userName'>UserName</p>
-            <input maxLength={12} className='inp pyGrad'/>
+            <input maxLength={12} id='usrInp' className='inp pyGrad'/>
+            <p className='pyGrad' id='passWord'>PassWord</p>
+            <input maxLength={12} id='passInp' className={'inp pyGrad'}/>
+            <button className={'submit'}>submit</button>
+
         </div>
         <div className="circle" id="lowerleft">
             <img src={logo} className="App-logo" alt="logo" />
