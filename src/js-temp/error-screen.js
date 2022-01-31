@@ -2,7 +2,6 @@ import React, {useState,useEffect} from "react";
 import Modal from 'react-bootstrap/Modal'
 import CloseButton from 'react-bootstrap/CloseButton'
 import $ from "jquery"
-import 'bootstrap/dist/css/bootstrap.min.css'
 import '../style/err.css'
 
 function Error() {

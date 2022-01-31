@@ -98,13 +98,20 @@ p{
   font-size: 20px;
   position: absolute;
   margin-top: 25px;
-}
 
-.submit{
-  position: absolute;
+}
+.box{
   margin-top: 25px;
-  top: 45%;
-  left: 41.8%;
+  top: 40%;
+  left: 30%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+}
+.submit{
+  margin-left: 15px;
+  margin-right: 15px;
   background: #802bb1;
   color: grey;
   transition: background 0.5s,color 0.5s;
@@ -119,15 +126,16 @@ p{
 
 }
 #usrInp{
-  top: 20%;
+  top: 15%;
   left: 38%;
 }
 #passInp{
-  top: 38%;
-  left: 38%;
+  top: 32%;
+  left: 37.5%;
 }
 #blob1{
-  width: 100%;
+
+  width: 700px;
 }
 #lowerleft{
   position: absolute;

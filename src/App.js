@@ -8,6 +8,7 @@ import $ from 'jquery'
 import './style/App.css';
 import Error from './js-temp/error-screen'
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 import React, {useState,useEffect} from "react";
@@ -41,7 +42,7 @@ function App() {
     }
     useEffect(()=> {
         let keypress= $('input').keypress(function (e){
-            if (e.key==" "){
+            if (e.key===" "){
                 e.preventDefault()
                 if ($(this).val()["length"]<13) {
                     let value = $(this).val()
@@ -56,7 +57,7 @@ function App() {
 
     return (
 
-      <div className="App">
+      <div className="App container">
           <Error/>
           <img src={waves} className='flip wave' alt="logo" />
 
@@ -78,8 +79,10 @@ function App() {
             <input maxLength={12} id='usrInp' className='inp pyGrad'/>
             <p className='pyGrad' id='passWord'>PassWord</p>
             <input maxLength={12} id='passInp' className={'inp pyGrad'}/>
-            <button type='submit' onClick={logCheck} className={'submit'}>submit</button>
-
+            <div className={'box'}>
+                <button type='submit' onClick={logCheck} className={'submit'}>submit</button>
+                <button type='submit' onClick={logCheck} className={'submit'}>submit</button>
+            </div>
         </div>
         <div className="circle" id="lowerleft">
             <img src={logo} className="App-logo" alt="logo" />
