@@ -2,10 +2,11 @@
   "name": "news-app",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node app.js"
   },
   "keywords": [],
   "author": "",

@@ -1,6 +1,7 @@
-const express = require("express");
+import {passCheck} from "./js_funcs/loginFuncs.js"
+import express from "express"
+import bodyParser from "body-parser";
 const app = express();
-var bodyParser = require('body-parser')
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });
@@ -12,11 +13,27 @@ const PORT = process.env.PORT || 8080;
 app.post("/login", (req, res) => {
     console.log("Connected to React");
     console.log(req.body);
-    res.send('authorized')
+    let params=req.body
+    let confirmation=passCheck(params['password'])
+    console.log(confirmation)
+    switch (confirmation){
+        case 0:
+            res.send({"response":'authorized'})
+        break;
+        case 1:
+            res.send({"response":'unauthorized',"error":"empty"})
+        break;
+        case 2:
+            res.send({"response":'unauthorized',"error":"number"})
+        case 3:
+        case 4:
+            res.send({"response":'unauthorized',"error":"char"})
+        break;
+
+    }
 
 
 
 
-    res.redirect("/");
 });
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
