@@ -3,10 +3,10 @@ import waves from './img/waves-1.svg';
 import wavesBody from './img/waves-body-2.svg';
 import KUTE from 'kute.js'
 import boostrap from "bootstrap"
-import blob1 from './img/blob-1.svg'
 import $ from 'jquery'
 import './style/App.css';
 import Error from './js-temp/error-screen'
+import Login from './js-temp/loginForm'
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -59,36 +59,7 @@ function App() {
 
       <div className="App container">
           <Error/>
-          <img src={waves} className='flip wave' alt="logo" />
-
-          <header className="App-header">
-          <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-              name idk
-          </a>
-        </header>
-        <body>
-        <img src={wavesBody} className='background-image' alt="logo" />
-        <div className="blob" alt="logo" >
-            <img src={blob1} id='blob1'/>
-            <p className='pyGrad' id='userName'>UserName</p>
-            <input maxLength={12} id='usrInp' className='inp pyGrad'/>
-            <p className='pyGrad' id='passWord'>PassWord</p>
-            <input maxLength={12} id='passInp' className={'inp pyGrad'}/>
-            <div className={'box'}>
-                <button type='submit' onClick={logCheck} className={'submit'}>submit</button>
-                <button type='submit' onClick={logCheck} className={'submit'}>submit</button>
-            </div>
-        </div>
-        <div className="circle" id="lowerleft">
-            <img src={logo} className="App-logo" alt="logo" />
-        </div>
-
-        </body>
+          <Login/>
       </div>
 
 
