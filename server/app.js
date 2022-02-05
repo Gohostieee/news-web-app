@@ -3,28 +3,7 @@ import express from "express"
 import bodyParser from "body-parser";
 import mysql from 'mysql'
 import 'dotenv/config'
-console.log(process.env.HOST)
-    console.log({host     : process.env.HOST,
-        user     : process.env.USER,
-        password : process.env.PASSWORD,
-        port     : process.env.RDS_PORT,
-        name     : process.env.NAME})
-const db = mysql.createConnection({
-    host     : process.env.HOST,
-    user     : process.env.USER,
-    password : process.env.PASSWORD,
-    port     : process.env.RDS_PORT,
-    name     : process.env.NAME
-});
-db.connect(function(err) {
-    if (err) {
-        console.error('Database connection failed: ' + err.stack);
-        return;
-    }
 
-    console.log('Connected to database.');
-});
-console.log("atleast")
 const app = express();
 app.get("/", (req, res) => {
     res.send("Hello World!");

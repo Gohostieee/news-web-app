@@ -1,6 +1,7 @@
 export function passCheck(pass) {
-    if(!pass.length>0){
-        console.log(pass.length)
+    console.log(pass.length)
+
+    if(pass.length<6){
         return 1;
     }else if (!/\d/.test(pass)){
         return 2;
