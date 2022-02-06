@@ -1,9 +1,7 @@
 import {passCheck} from "./js_funcs/loginFuncs.js"
 import express from "express"
 import bodyParser from "body-parser";
-import mysql from 'mysql'
 import 'dotenv/config'
-
 const app = express();
 app.get("/", (req, res) => {
     res.send("Hello World!");

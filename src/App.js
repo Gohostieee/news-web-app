@@ -1,7 +1,3 @@
-import logo from './img/logo.svg';
-import waves from './img/waves-1.svg';
-import wavesBody from './img/waves-body-2.svg';
-import KUTE from 'kute.js'
 import boostrap from "bootstrap"
 import $ from 'jquery'
 import './style/App.css';
