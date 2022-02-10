@@ -4,62 +4,10 @@ import "bootstrap";
 import '../style/App.css';
 import './error-screen';
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import './loginFormFuncs'
 
 function Login(){
-    function logCheck() {
-        let username = $("#email-address").val();
-        let password = $("#password").val();
 
-        console.log(username, password,"kekw")
-        fetch('/login', {
-            method: 'POST',
-            headers: {'Content-Type': "application/json"},
-            body: JSON.stringify({username, password}),
-
-
-        }).then(async r => {
-            let response = await r.json();
-            if (response['response'] === 'authorized') {
-
-            } else {
-                switch (response['error']) {
-                    case 'empty':
-                        $('.modal').css('display', 'block');
-                        console.log("unfair")
-                        $('#error-text').html("password must be at least 6 characters long");
-                        break;
-                    case 'char':
-                        $('.modal').css('display', 'block');
-                        console.log("unfair")
-                        $('#error-text').html("password must have upper and lowercase letters");
-                        break;
-                    case 'number':
-                        $('.modal').css('display', 'block');
-                        console.log("unfair")
-                        $('#error-text').html("password must have digits");
-                        break;
-                }
-            }
-        })
-    }
-    useEffect(()=> {
-        $('form').submit((e)=>{
-            e.preventDefault();
-            logCheck()
-        })
-         $('input').keypress(function (e){
-            if (e.key===" "){
-                e.preventDefault()
-                if ($(this).val()["length"]<13) {
-                    let value = $(this).val()
-
-                    $(this).val(value + "_")
-                    console.log($(this).val()["length"])
-                }
-            }
-        });
-    })
     return(
         <div>
 
@@ -78,34 +26,20 @@ function Login(){
                         <div className="rounded-md shadow-sm -space-y-px">
                             <div>
                                 <label htmlFor="email-address" className="sr-only">Email address</label>
-                                <input id="email-address" name="email" type="email" autoComplete="email" required
+                                <input disabled={true} id="email-address" name="email" type="email" autoComplete="email" required
                                        className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                                       placeholder="Email address"/>
+                                       placeholder="Users not available yet, enter as a guest"/>
                             </div>
                             <div>
                                 <label htmlFor="password" className="sr-only">Password</label>
-                                <input id="password" name="password" type="password" autoComplete="current-password"
+                                <input disabled={true} id="password" name="password" type="password" autoComplete="current-password"
                                        required
                                        className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                                       placeholder="Password"/>
+                                       placeholder="Users not available yet, enter as a guest"/>
                             </div>
                         </div>
 
-                        <div className="flex items-center justify-between">
-                            <div className="flex items-center">
-                                <input id="remember-me" name="remember-me" type="checkbox"
-                                       className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"/>
-                                    <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                                        Remember me
-                                    </label>
-                            </div>
 
-                            <div className="text-sm">
-                                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                                    Forgot your password?
-                                </a>
-                            </div>
-                        </div>
 
                         <div>
                             <div className={'flex'}>
