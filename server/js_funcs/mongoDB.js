@@ -1,6 +1,7 @@
 import { MongoClient } from 'mongodb'
 import  mongoose  from 'mongoose'
 import '../models/articles.js'
+import '../models/users.js'
 
 const uri = "";
 mongoose.connect(uri)
@@ -12,4 +13,8 @@ async function articles_store(data) {
     } else {
         throw `${data.code}: ${data.message}`;
     }
+}
+
+async function users_register() {
+    // ...
 }
