@@ -1,7 +1,8 @@
 import { MongoClient } from 'mongodb'
 import  mongoose  from 'mongoose'
 import '../models/articles.js'
-import '../models/users.js'
+import users from '../models/users.js'
+import crypto from 'crypto'
 
 const uri = "mongodb://localhost";
 mongoose.connect(uri)
@@ -16,7 +17,7 @@ async function articles_store(data) {
 }
 
 async function users_register(data) {
-    let passwordHash = require('crypto').createHash('sha256').update(data.password).digest('hex');
+    let passwordHash = crypto.createHash('sha256').update(data.password).digest('hex');
 
     let user = new users({
         name: data.name,
@@ -26,3 +27,5 @@ async function users_register(data) {
 
     user.save();
 }
+
+export default users_register;

@@ -2,6 +2,7 @@ import {passCheck} from "./js_funcs/loginFuncs.js"
 import express from "express"
 import bodyParser from "body-parser";
 import 'dotenv/config'
+import users_register from "./js_funcs/mongoDB.js"
 const app = express();
 app.get("/", (req, res) => {
     res.send("Hello World!");
@@ -38,6 +39,7 @@ app.post("/login", (req, res) => {
 
 });
 app.post('/register', (req, res) => {
+    //users_register(req.body);
     res.send('WIP');
 })
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
