@@ -2,6 +2,7 @@ import {passCheck} from "./js_funcs/loginFuncs.js"
 import express from "express"
 import bodyParser from "body-parser";
 import 'dotenv/config'
+console.log(process.env.newsapi)
 const app = express();
 app.get("/", (req, res) => {
     res.send("Hello World!");

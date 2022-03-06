@@ -1,19 +1,22 @@
+/*
 import React, {useState,useEffect} from "react";
 import Modal from 'react-bootstrap/Modal'
 import CloseButton from 'react-bootstrap/CloseButton'
 import $ from "jquery"
 import '../style/err.css'
-
+*/
 function Error() {
-    function dismissMod(){
+   /* function dismissMod(){
         $(".modal").css('display','none')
         console.log("gone")
     }
     useEffect(()=>{
         $("#modDismiss").click(dismissMod)
     })
+    */
+
     return(
-        <div className=''>
+        /*<div className=''>
         <div className="modal screener" tabIndex="-1" role="dialog">
             <div className="modal-dialog" role="document">
                 <div className="modal-content">
@@ -31,8 +34,8 @@ function Error() {
             </div>
         </div>
         </div>
-
+*/
+<div></div>
 );
-
 }
 export default Error;
