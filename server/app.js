@@ -3,6 +3,7 @@ import express from "express"
 import bodyParser from "body-parser";
 import 'dotenv/config'
 import users_register from "./js_funcs/mongoDB.js"
+console.log(process.env.newsapi)
 const app = express();
 app.get("/", (req, res) => {
     res.send("Hello World!");

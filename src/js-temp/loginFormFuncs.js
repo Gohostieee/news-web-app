@@ -1,7 +1,7 @@
 import $ from "jquery";
 import {useEffect} from "react";
-
-
+import { useNavigate } from "react-router-dom";
+const navigate=useNavigate
 function logCheck() {
     let username = $("#email-address").val();
     let password = $("#password").val();
@@ -40,6 +40,7 @@ function logCheck() {
 }
 function InitEffect() {
     useEffect(() => {
+        $('button').click(navigate("/home"))
         $('form').submit((e) => {
             e.preventDefault();
             logCheck()
@@ -57,3 +58,5 @@ function InitEffect() {
         });
     })
 }
+
+export default InitEffect
